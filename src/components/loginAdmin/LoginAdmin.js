@@ -58,21 +58,20 @@ class LoginAdmin extends Component {
                 <div className="form-data col-sm-6">
                   <h2>Para entrar</h2>
                   <p>Por favor ingresa los datos requeridos, luego presiona continuar.</p>
-                  <div className="col-sm-12">
+                  <div className="col-sm-12 campo">
                     <div className="input-group">
                       <span className="input-group-addon" id="basic-addon1"><span className="fa fa-user-o"></span></span>
                       <input type="text" name="usuario" className="form-control" placeholder="Usuario" aria-describedby="basic-addon1" value={this.state.value} onChange={this.handleChange} autoComplete="off" />
                     </div>
                   </div>
                   <div className="col-sm-12">
-                    <div className="input-group">
+                    <div className="input-group campo">
                       <span className="input-group-addon" id="basic-addon1"><span className="fa fa-lock"></span></span>
                       <input type="password" name="pass" className="form-control" placeholder="Contraseña" aria-describedby="basic-addon1" value={this.state.value} onChange={this.handleChange} />
                     </div>
                   </div>
-                  <div className="col-sm-6">
-                    <br/>
-                    <input className="btn btn-default pull-right submit-btn" type="submit" value="Continuar" onClick={(e)=>this.login(e)} />
+                  <div className="row justify-content-center">
+                    <input className="btn btn-default submit-btn" type="submit" value="Continuar" onClick={(e)=>this.login(e)} />
                   </div>
                   <div className="col-sm-12">{ this.state.alert ? <Alert msg={this.state.alertText} /> : null }</div>
                 </div>
