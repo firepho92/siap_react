@@ -1,0 +1,19 @@
+.question-container{
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25em;
+  background-color: #FFF;
+  margin-top: 1em;
+  padding:1.5em 1.5em 1.5em 1.5em;
+  text-align: center;
+}
+
+.submit-button{
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #45B94C !important;
+  color: #45B94C !important;
+}
+
+.btn-zone{
+  height: 1.5em;
+  margin-left: 0.5em;
+}

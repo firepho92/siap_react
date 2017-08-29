@@ -1,0 +1,871 @@
+esta es la parte de admin profiles que sacaba los tests de cada estudiante
+<div className="col-sm-6">
+  <div className="form-data col-sm-12 student-profile-wrapper">
+    { this.state.currentStudent ? <StudentProfile currentStudent = {this.state.currentStudent} className='tests' handleClick = {this.handleClick} /> : '' }
+  </div>
+</div>
+
+Aqui esta como meter las preguntas una por una
+
+import React, { Component } from 'react'
+import axios from 'axios'
+
+class StudentTestProfile extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      pregunta: ""
+    }
+    this.handleClick = this.handleClick.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(event){
+    const e = event.target;
+      this.setState({
+        pregunta: e.value
+      })
+  }
+
+  handleClick(){
+    axios.post(`http://localhost:3030/preguntas`, {
+      pregunta: this.state.pregunta,
+      respuesta: "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+      proyecto: "5996589abdc40a13035264c6"
+    })
+    .then(response => {
+      console.log(response)
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
+
+  render(){
+    return(
+      <studentTestProfile>
+        <div className="row">
+          <div className="col-sm-12">
+            <div className="form-data">
+              <input className="col-sm-10" type="text" value={this.state.value} onChange={this.handleChange}/>
+              <button className="btn btn-default submit-btn" onClick={this.handleClick}>Submit</button>
+            </div>
+          </div>
+        </div>
+      </studentTestProfile>
+    );
+  }
+}
+
+export default StudentTestProfile;
+
+{
+  "pregunta": "1. Tratar y hablar con sensibilidad a las personas.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "2. Ser jefe competente de un grupo, equipo o sociedad.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "3. Expresarte con facilidad en clase o al platicar con tus amigos.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "4. Dibujar casar, objetos, figuras humanas, etcétera.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "5. Cantar en un grupo.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "6. Llevar en forma correcta y ordenada los apuntes de clase.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "7. Entender principios y experimentos de biología.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "8. Ejecutar con rapidez y exactitud operaciones aritméticas.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "9. Armar y componer objetos mecánicos como chapas, timbres, etcétera.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "10. Actividades que requieren destreza manual.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "11. Ser miembro activo y útil en un club o sociedad.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "12. Organizar y dirigir festivales, encuentros deportivos, excursiones o campañas sociales.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "13. Redactar composiciones o artículos periodísticos.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "14. Pintar paisajes.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "15. Tocar un instrumento musical.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "16. Ordenar y clasificar debidamente documentos en una oficina.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "17. Entender principios y experimentos de física.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "18. Resolver problemas de aritmética.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "19. Desarmar, armar y componer objetos complicados.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "20. Manejar con habilidad herramienta de carpintería.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "21. Colaborar con otros para el bien de la comunidad",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "22. Convencer a otros para que hagan lo que crees que deben hacer.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "23. Componer versos serios o jocosos.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "24. Decorar artísticamente un salón, corredor, escenario o patio para un festival.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "25. Distinguir cuando alguien desentona en las canciones o piezas musicales.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "26. Contestar y redactar correctamente oficios y cartas.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "27. Entender principios y experimentos de química.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "28. Resolver rompecabezas numéricos.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "29. Resolver rompecabezas de alambre o de madera.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "30. Manejar con facilidad herramientas mecánicas como pinzas, llaves de tuercas, desarmador, etcétera.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "31. Saber escuchar a otros con paciencia y comprender su punto de vista.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "32. Dar órdenes a otros con seguridad y naturalidad.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "33. Escribir cuentos, narraciones o historietas.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "34. Modelar con barro, plastilina o grabar madera.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "35. Entonar correctamente las canciones de moda.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "36. Anotar y manejar con exactitud y rapidez nombres, números y otros datos.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "37. Entender principios y hechos económicos y sociales.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "38. Resolver problemas de álgebra.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "39. Armar y componer muebles.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "40. Manejar con habilidad pequeñas piezas y herramientas como agujas, manecillas, joyas, piezas de relojería, etcétera.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "41. Conversar en las reuniones y fiestas con acierto y naturalidad.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "42. Dirigir un grupo o equipo en situaciones difíciles o peligrosas.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "43. Distinguir y apreciar la buena literatura.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "44. Distinguir y apreciar la buena pintura.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "45. Distinguir y apreciar la buena música.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "46. Encargarse de recibir, anotar y dar recados sin olvidar detalles importantes.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "47. Entender las causas que determinan los acontecimientos históricos.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "48. Resolver problemas de geometría.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "49. Aprender el funcionamiento de ciertos mecanismos complicados como motores, relojes, bombas, etcétera.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "50. Hacer con facilidad trazos geométricos con la ayudad de las escuadras, la regla “T” y compás.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "51. Actuar con desinterés.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "52. Corregir a los demás sin ofenderlos.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "53. Exponer juicios públicamente sin preocupación por la crítica.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "54. Colaborar en la elaboración de un libro sobre el arte en la Arquitectura.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "55. Dirigir un grupo musical.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "56. Colaborar en el desarrollo de métodos más eficientes de trabajo.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "57. Realizar investigaciones científicas teniendo como finalidad la búsqueda de la verdad.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "58. Enseñar a resolver problemas de matemáticas.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "59. Inducir a las personas a obtener resultados prácticos.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+},
+{
+  "pregunta": "60. Participar en un concurso de modelismo de coches, aviones, barcos, etcétera.",
+  "respuesta": "Incompetente/Poco competente/Medianamente competente/Competente/Muy competente",
+  "proyecto": "5996589abdc40a13035264c6"
+}
+
+
+{
+  "pregunta": "1. Atender y cuidar enfermos."
+},
+{
+  "pregunta": "2. Intervenir activamente en las discusiones de clase."
+},
+{
+  "pregunta": "3. Escribir cuentos, crónicas o artículos."
+},
+{
+  "pregunta": "4. Dibujar y pintar."
+},
+{
+  "pregunta": "5. Cantar en un coro estudiantil."
+},
+{
+  "pregunta": "6. Llevar en orden tus libros y cuadernos."
+},
+{
+  "pregunta": "7. Conocer y estudiar la estructura de las plantas y de los animales."
+},
+{
+  "pregunta": "8. Resolver cuestionarios de matemáticas."
+},
+{
+  "pregunta": "9. Armar y desarmar objetos mecánicos."
+},
+{
+  "pregunta": "10. Salir de excursión."
+},
+{
+  "pregunta": "11. Proteger a los muchachos menores del grupo."
+},
+{
+  "pregunta": "12. Ser jefe de un grupo."
+},
+{
+  "pregunta": "13. Leer obras literarias."
+},
+{
+  "pregunta": "14. Moldear el barro, plastilina o cualquier otro material."
+},
+{
+  "pregunta": "15. Escuchar música clásica."
+},
+{
+  "pregunta": "16. Ordenar y clasificar los libros de una biblioteca."
+},
+{
+  "pregunta": "17. Hacer experimentos en un laboratorio."
+},
+{
+  "pregunta": "18. Resolver problemas de aritmética."
+},
+{
+  "pregunta": "19. Manejar herramientas y maquinaria."
+},
+{
+  "pregunta": "20. Pertenecer a un grupo de exploradores."
+},
+{
+  "pregunta": "21. Ser miembro de una sociedad de ayuda y asistencia."
+},
+{
+  "pregunta": "22. Dirigir la campaña política para un candidato estudiantil."
+},
+{
+  "pregunta": "23. Hacer versos para una publicación."
+},
+{
+  "pregunta": "24. Encargarte del decorado del lugar para un festival."
+},
+{
+  "pregunta": "25. Aprender a tocar un instrumento musical."
+},
+{
+  "pregunta": "26. Aprender a escribir a máquina y en taquigrafía."
+},
+{
+  "pregunta": "27. Investigar el origen de las costumbres de los pueblos."
+},
+{
+  "pregunta": "28. Llevar las cuentas de una institución."
+},
+{
+  "pregunta": "29. Construir objeto o muebles."
+},
+{
+  "pregunta": "30. Trabajar al aire libre, fuera de la ciudad."
+},
+{
+  "pregunta": "31. Enseñar a leer a los analfabetos."
+},
+{
+  "pregunta": "32. Hacer propaganda para la difusión de una idea."
+},
+{
+  "pregunta": "33. Representar un papel en una obra de teatro."
+},
+{
+  "pregunta": "34. Idear y diseñar el escudo de un club o sociedad."
+},
+{
+  "pregunta": "35. Ser miembro de una asociación musical."
+},
+{
+  "pregunta": "36. Ayudar a calificar pruebas."
+},
+{
+  "pregunta": "37. Estudiar y entender las causas de los movimientos sociales."
+},
+{
+  "pregunta": "38. Explicar a otros cómo resolver problemas de matemáticas."
+},
+{
+  "pregunta": "39. Reparar las instalaciones eléctricas, de gas o de plomería en tu casa."
+},
+{
+  "pregunta": "40. Sembrar y plantar en una granja durante las vacaciones."
+},
+{
+  "pregunta": "41. Ayudar a tus compañeros en sus dificultades y preocupaciones."
+},
+{
+  "pregunta": "42. Leer biografías de políticos eminentes."
+},
+{
+  "pregunta": "43. Participar en un concurso de oratoria."
+},
+{
+  "pregunta": "44. Diseñar el vestuario para una función teatral."
+},
+{
+  "pregunta": "45. Leer biografías de músicos eminentes."
+},
+{
+  "pregunta": "46. Encargarte del archivo y los documentos de una sociedad."
+},
+{
+  "pregunta": "47. Leer revistas y libros científicos."
+},
+{
+  "pregunta": "48. Participar en concursos de matemáticas."
+},
+{
+  "pregunta": "49. Proyectar y dirigir alguna construcción."
+},
+{
+  "pregunta": "50. Atender animales en un rancho durante las vacaciones."
+},
+{
+  "pregunta": "51. ¿Qué tanto te gustaría trabajar como funcionario al servicio de las clases humildes?"
+},
+{
+  "pregunta": "52. ¿Qué tanto te gustaría trabajar como experto en relaciones sociales de una gran empresa?"
+},
+{
+  "pregunta": "53. ¿Qué tanto te gustaría trabajar como escritor en un periódico o empresa editorial?"
+},
+{
+  "pregunta": "54. ¿Qué tanto te gustaría trabajar como dibujante profesional en una empresa?"
+},
+{
+  "pregunta": "55. ¿Qué tanto te gustaría trabajar como concertista en una sinfónica?"
+},
+{
+  "pregunta": "56. ¿Qué tanto te gustaría trabajar como técnico organizador de oficinas?"
+},
+{
+  "pregunta": "57. ¿Qué tanto te gustaría trabajar como investigar en un laboratorio?"
+},
+{
+  "pregunta": "58. ¿Qué tanto te gustaría trabajar como experto calculista en una institución?"
+},
+{
+  "pregunta": "59. ¿Qué tanto te gustaría trabajar como perito mecánico en un taller?"
+},
+{
+  "pregunta": "60. ¿Qué tanto te gustaría trabajar como técnico cuyas actividades se desempeñan fuera de la ciudad?"
+}
+
+{
+  "pregunta": "1. Tratar y hablar con sensibilidad a las personas."
+},
+{
+  "pregunta": "2. Ser jefe competente de un grupo, equipo o sociedad."
+},
+{
+  "pregunta": "3. Expresarte con facilidad en clase o al platicar con tus amigos."
+},
+{
+  "pregunta": "4. Dibujar casar, objetos, figuras humanas, etcétera."
+},
+{
+  "pregunta": "5. Cantar en un grupo."
+},
+{
+  "pregunta": "6. Llevar en forma correcta y ordenada los apuntes de clase."
+},
+{
+  "pregunta": "7. Entender principios y experimentos de biología."
+},
+{
+  "pregunta": "8. Ejecutar con rapidez y exactitud operaciones aritméticas."
+},
+{
+  "pregunta": "9. Armar y componer objetos mecánicos como chapas, timbres, etcétera."
+},
+{
+  "pregunta": "10. Actividades que requieren destreza manual."
+},
+{
+  "pregunta": "11. Ser miembro activo y útil en un club o sociedad."
+},
+{
+  "pregunta": "12. Organizar y dirigir festivales, encuentros deportivos, excursiones o campañas sociales."
+},
+{
+  "pregunta": "13. Redactar composiciones o artículos periodísticos."
+},
+{
+  "pregunta": "14. Pintar paisajes."
+},
+{
+  "pregunta": "15. Tocar un instrumento musical."
+},
+{
+  "pregunta": "16. Ordenar y clasificar debidamente documentos en una oficina."
+},
+{
+  "pregunta": "17. Entender principios y experimentos de física."
+},
+{
+  "pregunta": "18. Resolver problemas de aritmética."
+},
+{
+  "pregunta": "19. Desarmar, armar y componer objetos complicados."
+},
+{
+  "pregunta": "20. Manejar con habilidad herramienta de carpintería."
+},
+{
+  "pregunta": "21. Colaborar con otros para el bien de la comunidad"
+},
+{
+  "pregunta": "22. Convencer a otros para que hagan lo que crees que deben hacer."
+},
+{
+  "pregunta": "23. Componer versos serios o jocosos."
+},
+{
+  "pregunta": "24. Decorar artísticamente un salón, corredor, escenario o patio para un festival."
+},
+{
+  "pregunta": "25. Distinguir cuando alguien desentona en las canciones o piezas musicales."
+},
+{
+  "pregunta": "26. Contestar y redactar correctamente oficios y cartas."
+},
+{
+  "pregunta": "27. Entender principios y experimentos de química."
+},
+{
+  "pregunta": "28. Resolver rompecabezas numéricos."
+},
+{
+  "pregunta": "29. Resolver rompecabezas de alambre o de madera."
+},
+{
+  "pregunta": "30. Manejar con facilidad herramientas mecánicas como pinzas, llaves de tuercas, desarmador, etcétera."
+},
+{
+  "pregunta": "31. Saber escuchar a otros con paciencia y comprender su punto de vista."
+},
+{
+  "pregunta": "32. Dar órdenes a otros con seguridad y naturalidad."
+},
+{
+  "pregunta": "33. Escribir cuentos, narraciones o historietas."
+},
+{
+  "pregunta": "34. Modelar con barro, plastilina o grabar madera."
+},
+{
+  "pregunta": "35. Entonar correctamente las canciones de moda."
+},
+{
+  "pregunta": "36. Anotar y manejar con exactitud y rapidez nombres, números y otros datos."
+},
+{
+  "pregunta": "37. Entender principios y hechos económicos y sociales."
+},
+{
+  "pregunta": "38. Resolver problemas de álgebra."
+},
+{
+  "pregunta": "39. Armar y componer muebles."
+},
+{
+  "pregunta": "40. Manejar con habilidad pequeñas piezas y herramientas como agujas, manecillas, joyas, piezas de relojería, etcétera."
+},
+{
+  "pregunta": "41. Conversar en las reuniones y fiestas con acierto y naturalidad."
+},
+{
+  "pregunta": "42. Dirigir un grupo o equipo en situaciones difíciles o peligrosas."
+},
+{
+  "pregunta": "43. Distinguir y apreciar la buena literatura."
+},
+{
+  "pregunta": "44. Distinguir y apreciar la buena pintura."
+},
+{
+  "pregunta": "45. Distinguir y apreciar la buena música."
+},
+{
+  "pregunta": "46. Encargarse de recibir, anotar y dar recados sin olvidar detalles importantes."
+},
+{
+  "pregunta": "47. Entender las causas que determinan los acontecimientos históricos."
+},
+{
+  "pregunta": "48. Resolver problemas de geometría."
+},
+{
+  "pregunta": "49. Aprender el funcionamiento de ciertos mecanismos complicados como motores, relojes, bombas, etcétera."
+},
+{
+  "pregunta": "50. Hacer con facilidad trazos geométricos con la ayudad de las escuadras, la regla “T” y compás."
+},
+{
+  "pregunta": "51. Actuar con desinterés."
+},
+{
+  "pregunta": "52. Corregir a los demás sin ofenderlos."
+},
+{
+  "pregunta": "53. Exponer juicios públicamente sin preocupación por la crítica."
+},
+{
+  "pregunta": "54. Colaborar en la elaboración de un libro sobre el arte en la Arquitectura."
+},
+{
+  "pregunta": "55. Dirigir un grupo musical."
+},
+{
+  "pregunta": "56. Colaborar en el desarrollo de métodos más eficientes de trabajo."
+},
+{
+  "pregunta": "57. Realizar investigaciones científicas teniendo como finalidad la búsqueda de la verdad."
+},
+{
+  "pregunta": "58. Enseñar a resolver problemas de matemáticas."
+},
+{
+  "pregunta": "59. Inducir a las personas a obtener resultados prácticos."
+},
+{
+  "pregunta": "60. Participar en un concurso de modelismo de coches, aviones, barcos, etcétera."
+}
+
+primer componente de perfil psicologico
+
+constructor(props){
+  super(props);
+  this.state = {
+    data: [],
+    render:false,
+    rubros: [],
+    preguntas:[],
+    evaluaciones: [],
+    calificaciones: [],
+    nReactivos: '',
+    props: ''
+  };
+  this.fetchData = this.fetchData.bind(this)
+}
+
+componentWillReceiveProps(nextProps){
+  this.setState({
+    props: nextProps
+  })
+  this.fetchData()
+}
+
+componentDidMount(){
+  this.fetchData()
+}
+
+fetchData(){
+  axios.get(`http://localhost:3030/preguntas/${this.props.proyecto.proyecto._id}`)
+  .then(response => {
+    var split = response.data[0].respuesta.split('/')
+    split = split.length - 1;
+    this.setState({
+      nReactivos: split
+    })
+
+    this.props.proyecto.proyecto.rubros.map(rubro=>{
+      this.state.rubros.push(rubro.rubro)
+      var preguntas = rubro.preguntas.split('/')
+      this.state.preguntas.push(preguntas)
+    })
+
+    this.state.preguntas.map(pregunta=>{
+      var sumaRespuestasRubro = pregunta.map(index=>{
+        var suma = 0, number;
+        number = parseInt(this.props.proyecto.respuestas[index-1])
+        suma = suma + number;
+        return suma;
+      })
+      this.state.evaluaciones.push(sumaRespuestasRubro)
+    })
+
+    this.state.evaluaciones.map(evaluacion=>{
+      var calif = 0;
+      for (var i = 0; i < evaluacion.length; i++) {
+        calif = calif + (parseInt(evaluacion[i], 10)-1)
+      }
+      var length = this.state.evaluaciones[0].length;
+      calif = calif * 100 / (length * this.state.nReactivos)
+      this.state.calificaciones.push(calif)
+    })
+    this.setState({
+      data: []
+    })
+    for (var i = 0; i < this.state.rubros.length; i++) {
+      this.state.data.push({
+        subject: this.state.rubros[i],
+        A: this.state.calificaciones[i],
+        fullMark: 100
+      });
+      if(i == this.state.rubros.length-1){
+        this.setState({
+          render: true
+        })
+      }
+    }
+
+  })
+  .catch(error => {
+    console.log(error);
+  })
+}
+
+render(){
+  return(<studentTestProfile>
+      <div className='form-data student-profile-wrapper test-profile' onClick={this.handleClick}>
+        <h3>{this.props.proyecto.proyecto.nombre}</h3>
+        <div className='test-description col-sm-3'>
+          <p>Rubros a evaluar:</p>
+          {this.state.data.map((key, i) => {
+            return (<div key={key + i}>{key.subject + ': ' + key.A.toFixed(1)}</div>);
+          })}
+        </div>
+        <div className="col-sm-7">
+          {this.state.render ? <TwoLevelPieChart data = {this.state.data} nombre = {this.props.currentStudent.encuestado.nombre} handleUpdate = {this.handleUpdate} /> : ''}
+        </div>
+      </div>
+    </studentTestProfile>);
+}
+}
+
+class TwoLevelPieChart extends Component{
+constructor(props){
+  super(props);
+  this.state = {
+    data: '',
+    datos: [[
+        {subject: "Servicio Social(SS)", A: 79.16666666666667, fullMark: 100},
+        {subject: "Ejecutivo Persuasiva(EP)", A: 70.83333333333333, fullMark: 100},
+        {subject: "Verbal(V)", A: 45.833333333333336, fullMark: 100},
+        {subject: "Artístico Plástica(AP)", A: 41.666666666666664, fullMark: 100},
+        {subject: "Musical(M)", A: 50, fullMark: 100},
+        {subject: "Organización(OG)", A: 66.66666666666667, fullMark: 100},
+        {subject: "Científica(CT)", A: 54.166666666666664, fullMark: 100},
+        {subject: "Cálculo(CL)", A: 25, fullMark: 100},
+        {subject: "Mecánico Constructiva(MC)", A: 62.5, fullMark: 100},
+        {subject: "Trabajo al Aire Libre(AL)", A: 75, fullMark: 100}
+      ],
+      [
+        {subject: "Servicio Social(SS)", A: 30, fullMark: 100},
+        {subject: "Ejecutivo Persuasiva(EP)", A: 10.83333333333333, fullMark: 100},
+        {subject: "Verbal(V)", A: 85.833333333333336, fullMark: 100},
+        {subject: "Artístico Plástica(AP)", A: 91.666666666666664, fullMark: 100},
+        {subject: "Musical(M)", A: 50, fullMark: 100},
+        {subject: "Organización(OG)", A: 99.66666666666667, fullMark: 100},
+        {subject: "Científica(CT)", A: 14.166666666666664, fullMark: 100},
+        {subject: "Cálculo(CL)", A: 55, fullMark: 100},
+        {subject: "Mecánico Constructiva(MC)", A: 22.5, fullMark: 100},
+        {subject: "Trabajo al Aire Libre(AL)", A: 5, fullMark: 100}
+      ]]
+  };
+}
+
+componentWillMount(){
+  this.setState({
+    data: this.props.data
+  })
+}
+
+componentWillReceiveProps(nextProps){
+  this.setState({
+    data: nextProps.data
+  })
+  console.log(this.props.data);
+}

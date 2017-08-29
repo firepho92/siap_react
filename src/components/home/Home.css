@@ -1,0 +1,25 @@
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.home{
+  height: 75vh;
+  text-align: center;
+}
+
+.home-btn{
+  color: #45B94C;
+  border: 1px solid #45B94C;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  transition: all 0.2s ease-in;
+}
+
+.home-btn:hover{
+  color: #148619;
+  border: 1px solid #148619;
+}

@@ -1,0 +1,32 @@
+.test{
+  text-align: center;
+  padding: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.title{
+  font-size: 1.2em;
+  background-color: #FFF;
+  border: none;
+}
+
+.title:focus{
+  outline: 0;
+}
+
+.eval{
+  padding-top: 1em;
+  text-align: left;
+}
+
+.rubros{
+  font-size: .85em;
+}
+
+.chart{
+  font-size: .85em;
+}
+
+.puntaje{
+  font-weight: bold;
+}

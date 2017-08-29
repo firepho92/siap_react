@@ -1,0 +1,27 @@
+.nav-bar{
+  background: #263238 !important;
+  color: #fafafa !important;
+  border: none !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.navbar-brand{
+  color: #45B94C !important;
+  transition: all .2s ease-in;
+}
+
+.navbar-brand:hover{
+  color: #148619 !important;
+}
+
+.link{
+  font-size: .99em;
+  color: #45B94C;
+  transition: all .2s ease-in;
+  text-decoration: none !important;
+}
+
+.link:hover{
+  color: #148619;
+}

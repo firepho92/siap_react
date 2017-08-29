@@ -1,0 +1,50 @@
+.admin-table, .student-profile-wrapper{
+  min-height: 80vh;
+  max-height: 80vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.Test-card{
+  background-color: #FFF;
+  max-height: 170px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  margin-bottom: 1.2em;
+  padding: 1em 2em;
+  text-align: left;
+  font-family: proxima-nova-regular;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.Test-card:hover{
+  border-color: #45B94C;
+}
+
+.Test-card:hover .Test-card-title{
+  color: #45B94C;
+}
+
+.Test-card:hover .Test-card-description{
+  color: #000;
+}
+
+.Test-card-title{
+  height: 1.5em;
+  font-size: 1.5em;
+  transition: all 0.2s ease-in-out;
+}
+
+.Test-card-description{
+  color: #888;
+  transition: all 0.2s ease-in-out;
+}
+
+.link{
+  cursor: pointer;
+}
+
+.link:hover{
+  text-decoration: underline;
+}

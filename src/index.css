@@ -1,0 +1,15 @@
+@font-face {
+  font-family: proxima-nova-regular;
+  src: url('./assets/proxima-nova.woff');
+}
+@font-face {
+  font-family: opensans-regular;
+  src: url('./assets/OpenSans-Regular.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F5F8FA;
+  font-family: opensans-regular;
+}

@@ -1,0 +1,23 @@
+.form-data{
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25em;
+  background-color: #FFF;
+  margin-top: 1em;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+  text-align: center;
+}
+
+.submit-btn{
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #45B94C !important;
+  color: #45B94C !important;
+  margin-top: 1em;
+}
+
+.campo{
+  padding-top: 2em;
+}
+
+.campo:nth-child(3){
+  padding-top: 0;
+}

@@ -1,0 +1,39 @@
+.test-description{
+  font-size: 0.9em;
+  text-align: left;
+  color: #888;
+  margin-top: 2em;
+}
+
+.test-profile{
+  margin-bottom: 1em;
+  overflow-y: scroll !important;
+}
+
+.profile{
+  padding: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25em;
+  text-align: center;
+  background: #FFF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tests-container{
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25em;
+  text-align: center;
+  background: #FFF;
+  max-height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.atras{
+  margin: 1em;
+}
+
+.email{
+  font-size: 0.8em;
+}

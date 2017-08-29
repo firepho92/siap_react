@@ -1,0 +1,15 @@
+.item-link{
+  color: #45B94C;
+}
+
+.item-link:hover{
+  text-decoration: underline;
+}
+
+tr{
+  cursor: pointer;
+}
+
+td, th{
+  text-align: left;
+}
