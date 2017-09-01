@@ -35,7 +35,7 @@ class StudentTestProfile extends Component {
 
             respuestas = parseInt(x.toFixed(1), 10);
           }
-          rubros.push({subject: rubro.rubro, A: respuestas, fullMark: 100});
+          rubros.push({name: rubro.rubro, A: respuestas, fullMark: 100});
         })
         proyectos.push({proyecto: proyecto.proyecto.nombre, fecha: proyecto.fecha , rubros: rubros})
         resolve("Success!")

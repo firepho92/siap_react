@@ -10,6 +10,7 @@ class AdminProfiles extends Component {
     super(props);
     this.state = {
       students: [],
+      backup: [],
       currentStudent: false,
       studentTests: [],
       alert: false,
@@ -27,7 +28,8 @@ class AdminProfiles extends Component {
     axios.get(`${serverAddress}/respuestas`)
     .then(response => {
       this.setState({
-        students: response.data
+        students: response.data,
+        backup: response.data
       })
     })
     .catch(error => {
@@ -35,16 +37,22 @@ class AdminProfiles extends Component {
     })
   }
 
-  handleChange(event){
-    axios.post(`${serverAddress}/encuestados`, {
-      nombre: event.target.value
-    })
-    .then(response => {
-      console.log(response.data);
-    })
-    .catch(error => {
-      console.log(error)
-    })
+  handleChange(e){
+    var str = e.target.value, filteredStudents = [];
+    if(str.length >= 1){
+      for (var i = 0; i < this.state.backup.length; i++) {
+        if(this.state.backup[i].encuestado.nombre.match(new RegExp(str, 'i'))){
+          filteredStudents.push(this.state.backup[i]);
+        }
+      }
+      this.setState({
+        students: filteredStudents
+      })
+    }else{
+      this.setState({
+        students: this.state.backup
+      })
+    }
   }
 
   handleClick(key, iterator){

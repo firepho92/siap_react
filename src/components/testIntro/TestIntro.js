@@ -46,7 +46,7 @@ class TestIntro extends Component {
   }
 
   handleClick(event){
-    if(!this.state.nombre || !this.state.email){
+    if(!this.state.matricula || !this.state.nombre || !this.state.email){
       this.setState({
         alert: true,
         alertText: "Debes ingresar los campos de manera correcta."

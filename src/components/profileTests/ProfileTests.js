@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis} from 'recharts'
+import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts'
 import './ProfileTests.css'
 
 class ProfileTests extends Component {
@@ -17,7 +17,7 @@ class ProfileTests extends Component {
                   <div className="rubros">
                     {proyecto.rubros.map((rubro, i)=>{
                       return (
-                        <p key={i}>{rubro.subject}: <span className="puntaje">{rubro.A}</span></p>
+                        <p key={i}>{rubro.name}: <span className="puntaje">{rubro.A}%</span></p>
                       )
                     })}
                   </div>
@@ -39,13 +39,13 @@ class TwoLevelPieChart extends Component {
 
   render() {
     return (
-      <RadarChart cx={300} cy={150} outerRadius={90} width={500} height={300} data={this.props.proyecto.rubros}>
-        <Radar name={this.props.proyecto.proyecto} dataKey="A" stroke="#45B94C" fill="#45B94C" fillOpacity={0.6}/>
-        <PolarGrid />
-        <Legend />
-        <PolarAngleAxis dataKey="subject" />
-        <PolarRadiusAxis/>
-      </RadarChart>
+      <BarChart width={500} height={250} data={this.props.proyecto.rubros}>
+        <XAxis dataKey="name" />
+        <YAxis />
+        <CartesianGrid strokeDasharray="3 3" />
+        <Tooltip />
+        <Bar dataKey="A" fill="#8884d8" />
+      </BarChart>
     );
   }
 

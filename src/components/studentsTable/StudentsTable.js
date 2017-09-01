@@ -12,8 +12,8 @@ class StudentsTable extends Component {
               <h3>Lista de estudiantes</h3>
               <div className="col-sm-12">
                 <div className="input-group">
-                  <span className="input-group-addon" id="basic-addon1"><span className="glyphicon glyphicon-user"></span></span>
-                  <input type="text" name="nombre" className="form-control" placeholder="Nombre" aria-describedby="basic-addon1" autoComplete="off" onChange={this.handleChange} />
+                  <span className="input-group-addon" id="basic-addon1"><span className="fa fa-search"></span></span>
+                  <input type="text" name="nombre" className="form-control" placeholder="Nombre" aria-describedby="basic-addon1" autoComplete="off" onChange={(e)=>this.props.handleChange(e)} />
                   <span className="input-group-btn">
                     <button className="btn btn-default" type="button">Buscar</button>
                   </span>

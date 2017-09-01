@@ -3,6 +3,7 @@ import TestCard from '../testCard/TestCard'
 import axios from 'axios'
 import {serverAddress} from '../../serverConnectionData'
 import './AllTests.css'
+import ExportPreguntas from '../agregarPreguntas/main'
 
 class AllTests extends Component {
   constructor(){
@@ -33,6 +34,9 @@ class AllTests extends Component {
                 <TestCard proyectos={ this.state.proyectos } />
 
               </div>
+
+              <ExportPreguntas />
+
             </div>
           </div>
         </test>
