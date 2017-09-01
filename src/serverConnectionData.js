@@ -1,1 +1,1 @@
-export const serverAddress = 'http://localhost:3030'
+export const serverAddress = 'https://shielded-everglades-59262.herokuapp.com/'
