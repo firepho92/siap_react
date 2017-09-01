@@ -44,7 +44,7 @@ class TwoLevelPieChart extends Component {
         <YAxis />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
-        <Bar dataKey="A" fill="#8884d8" />
+        <Bar dataKey="A" fill="#45B94C" />
       </BarChart>
     );
   }
