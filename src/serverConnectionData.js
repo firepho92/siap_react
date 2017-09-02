@@ -1,1 +1,1 @@
-export const serverAddress = 'http://siap-test-api'
+export const serverAddress = 'https://siap-test-api.herokuapp.com/'
