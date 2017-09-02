@@ -1,1 +1,1 @@
-export const serverAddress = 'http://localhost:3030'
+export const serverAddress = 'http://siap-test-api'
